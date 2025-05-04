@@ -35,7 +35,7 @@ class Recipe(models.Model):
     user = models.ForeignKey(User, related_name='recipe_owner', on_delete=models.CASCADE)
     title = models.CharField(max_length=300, null=False, blank=False)
     description = models.CharField(max_length=500, null=False, blank=False)
-    instruction = RichTextField(max_length=10000, null=False, blank=False)
+    instructions = RichTextField(max_length=10000, null=False, blank=False)
     ingredients = RichTextField(max_length=10000, null=False, blank=False)
     images = ResizedImageField(
         size=[400, None], quality=75, upload_to='recipes/', force_format='WEBP',
