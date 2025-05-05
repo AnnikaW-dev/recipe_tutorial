@@ -9,7 +9,7 @@ class RecipeForm(forms.ModelForm):
     """
     class Meta:
         model = Recipe
-        fields = ['title', 'description', 'ingredients', 'instructions', 'images', 'image_alt', 'meal_type', 'cuisine_types', 'calories']
+        fields = ['title', 'description', 'ingredients', 'instructions', 'image', 'image_alt', 'meal_type', 'cuisine_types', 'calories']
 
         ingredients = forms.CharField(widget=RichTextWidget())
         instruction = forms.CharField(widget=RichTextWidget())
@@ -23,7 +23,7 @@ class RecipeForm(forms.ModelForm):
             'description': 'Description',
             'ingredients': 'Recipe Ingredients',
             'instruction': 'Recipe Instructions',
-            'images': 'Recipe Images',
+            'image': 'Recipe Image',
             'image_alt': 'Descrabe Image',
             'meal_type': 'Meal Type',
             'cuisine_type': 'Cuisine Type',

@@ -10,7 +10,7 @@ class AddRecipe(LoginRequiredMixin, CreateView):
     """
     Add recipe view
     """
-    template_name = 'recipes/add_recipes.html'
+    template_name = 'recipes/add_recipe.html'
     model = Recipe
     form_class = RecipeForm
     success_url = '/recipes/'
